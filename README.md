@@ -1,1 +1,1 @@
-Apache_Pig
+This repo has pig scripts
