@@ -14,19 +14,19 @@ Follow these steps to run the Pig script and perform the analysis:
 - Ensure that you have Apache Pig installed on your system. If not, refer to the official Apache Pig documentation for installation instructions.
 - Place the Titanic dataset file in a location accessible from the Pig script.
 - Open the Pig script file, titanic.pig, and modify the following line:
-       titanic_data = LOAD 'path/to/titanic_dataset.csv' USING PigStorage(',') AS (...);
-       Replace 'path/to/titanic_dataset.csv' with the actual path to the Titanic dataset file.
+       * titanic_data = LOAD 'path/to/titanic_dataset.csv' USING PigStorage(',') AS (...);
+       * Replace 'path/to/titanic_dataset.csv' with the actual path to the Titanic dataset file.
 - Review the Pig script to understand the analysis logic and modify it if necessary.
 - Run the Pig script using the following command:
-       pig -x local titanic_analysis.pig
-       This command executes the Pig script in local mode(You can also run with HDFS).
+       * pig -x local titanic_analysis.pig
+       * This command executes the Pig script in local mode(You can also run with HDFS).
 - Once the script finishes executing, it will output the following statistics:
-       Number of passengers: [value]
-       Number of survivors: [value]
-       Number of female passengers: [value]
-       Number of male passengers: [value]
-       Number of female survivors: [value]
-       Number of male survivors: [value]
+       * Number of passengers: [value]
+       * Number of survivors: [value]
+       * Number of female passengers: [value]
+       * Number of male passengers: [value]
+       * Number of female survivors: [value]
+       * Number of male survivors: [value]
 
 ### Note
 - The Pig script assumes that the dataset is in a comma-separated values (CSV) format. Modify the LOAD statement accordingly if your dataset is in a different format.
