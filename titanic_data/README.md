@@ -18,7 +18,7 @@ Follow these steps to run the Pig script and perform the analysis:
     Replace 'path/to/titanic_dataset.csv' with the actual path to the Titanic dataset file.
 - Review the Pig script to understand the analysis logic and modify it if necessary.
 - Run the Pig script using the following command:
-       __"pig -x local titanic_analysis.pig"__. 
+       __"pig -x local titanic.pig"__. 
        This command executes the Pig script in local mode(You can also run with HDFS).
 - Once the script finishes executing, it will output the following statistics:
        * Number of passengers: [value]
