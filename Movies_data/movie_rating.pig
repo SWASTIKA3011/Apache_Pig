@@ -1,17 +1,17 @@
 /* loading users data */
-usersRawData = LOAD '/Users/swastika/Desktop/big_data/users.dat' USING PigStorage(':') AS (user:int, n1, gender:chararray, n2, age:int, n3, occupation:int, n4, zip:chararray);
+usersRawData = LOAD '/file_path/users.dat' USING PigStorage(':') AS (user:int, n1, gender:chararray, n2, age:int, n3, occupation:int, n4, zip:chararray);
 
 /* clean users data */
 usersData = FOREACH usersRawData GENERATE user, gender, age, occupation, zip;
 
 /* loading ratings data */
-ratesRawData = LOAD '/Users/swastika/Desktop/big_data/ratings.dat' USING PigStorage(':') AS (user:int, p1, movieID:int, p2, rate:int, p3, timestamp:int);
+ratesRawData = LOAD '/file_path/ratings.dat' USING PigStorage(':') AS (user:int, p1, movieID:int, p2, rate:int, p3, timestamp:int);
 
 /* clean ratings data */
 ratesData = FOREACH ratesRawData GENERATE user, movieID, rate, timestamp;
 
 /* loading movie data */
-moviesInfoRawData = LOAD '/Users/swastika/Desktop/big_data/movies.dat' USING PigStorage(':') AS (movieID:int, m2, name:chararray, m3, genre:chararray);
+moviesInfoRawData = LOAD '/file_path/movies.dat' USING PigStorage(':') AS (movieID:int, m2, name:chararray, m3, genre:chararray);
 
 /* clean movie data */
 moviesInfoData = FOREACH moviesInfoRawData GENERATE movieID, name;
@@ -60,4 +60,4 @@ ageMaxMovieIDName = FOREACH ageMaxMovieIdJoinNameRawData GENERATE $0, $1, $5;
 
 /* age , Movie , Name */
 DUMP ageMaxMovieIDName;
-STORE ageMaxMovieIDName INTO '/Users/swastika/Desktop/big_data/movie_output' USING PigStorage('\t');
+STORE ageMaxMovieIDName INTO '/file_path/movie_output' USING PigStorage('\t');
