@@ -1,11 +1,11 @@
 /* Register piggybank.jar */
-REGISTER /Users/swastika/Desktop/big_data/piggybank.jar; 
+REGISTER /file_path/piggybank.jar; 
 
 /* Define shortname for CSVExcelStorage */
 DEFINE CSVExcelStorage org.apache.pig.piggybank.storage.CSVExcelStorage;
 
 /*loading dataset*/
-temp = LOAD '/Users/swastika/Desktop/big_data/Titanic.csv' USING CSVExcelStorage(',','NO_MULTILINE','NOCHANGE','SKIP_INPUT_HEADER') AS
+temp = LOAD '/file_path/Titanic.csv' USING CSVExcelStorage(',','NO_MULTILINE','NOCHANGE','SKIP_INPUT_HEADER') AS
 	(number:chararray,name:chararray,pclass:chararray,age:int,sex:chararray,survived:chararray,sexcode:chararray);
 
 /* Strip header */
@@ -38,9 +38,9 @@ female_survivers_g = GROUP female_survivers ALL;
 total_female_survivers = FOREACH female_survivers_g GENERATE CONCAT('4. Total female survivers = ', (chararray) COUNT(female_survivers));
 
 /* How many classes? */
---classes = FOREACH passengers GENERATE class;
---number_of_classes = DISTINCT classes;
---DUMP number_of_classes;
+classes = FOREACH passengers GENERATE class;
+number_of_classes = DISTINCT classes;
+DUMP number_of_classes;
 
 /* 5. Number of survivers by class */
 surviver_class = GROUP survivers BY class;
