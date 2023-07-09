@@ -21,9 +21,9 @@ Follow these steps to run the Pig script and perform the analysis:
        __"pig -x local titanic_analysis.pig"__. 
        This command executes the Pig script in local mode(You can also run with HDFS).
 - Once the script finishes executing, it will output the following statistics:
-    - Number of passengers: [value]
-    - Number of survivors: [value]
-    - Number of female passengers: [value]
+       * Number of passengers: [value]
+       * Number of survivors: [value]
+       * Number of female passengers: [value]
        * Number of male passengers: [value]
        * Number of female survivors: [value]
        * Number of male survivors: [value]
