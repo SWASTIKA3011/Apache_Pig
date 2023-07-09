@@ -14,8 +14,8 @@ Follow these steps to run the Pig script and perform the analysis:
 - Ensure that you have Apache Pig installed on your system. If not, refer to the official Apache Pig documentation for installation instructions.
 - Place the Titanic dataset file in a location accessible from the Pig script.
 - Open the Pig script file, titanic.pig, and modify the following line:
-       * titanic_data = LOAD 'path/to/titanic_dataset.csv' USING PigStorage(',') AS (...);
-       * Replace 'path/to/titanic_dataset.csv' with the actual path to the Titanic dataset file.
+ * titanic_data = LOAD 'path/to/titanic_dataset.csv' USING PigStorage(',') AS (...);
+ * Replace 'path/to/titanic_dataset.csv' with the actual path to the Titanic dataset file.
 - Review the Pig script to understand the analysis logic and modify it if necessary.
 - Run the Pig script using the following command:
        * pig -x local titanic_analysis.pig
