@@ -3,10 +3,10 @@ This repository contains a collection of Pig scripts and associated datasets for
 ### Repository Structure
 The repository is structured as follows:
 
-|- pig_scripts/
-   |- script.pig
-   |- dataset.csv
-   |- README.md
+- pig_scripts/
+   - script.pig
+   - dataset.csv
+   - README.md
    
 The pig_scripts/ directory contains the Pig scripts and respective datasets for different analysis tasks. Each script is a standalone file. The dataset.csv stores the datasets used by the Pig scripts. Datasets are typically in CSV or similar formats.
 
